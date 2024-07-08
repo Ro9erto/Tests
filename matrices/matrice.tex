@@ -1,0 +1,44 @@
+\documentclass[11pt]{article}
+
+\usepackage{csquotes}
+\usepackage{amsmath,amssymb,amsfonts,bm,amsthm}
+\usepackage{fdsymbol}
+\usepackage[margin=1cm]{geometry}
+
+\makeatletter
+\usepackage{tikz}
+\newcommand*\circled[2][1.2]{\tikz[baseline=(char.base)]{
+    \node[shape=circle, draw, inner sep=1pt, 
+        minimum height={\f@size*#1},] (char) {\vphantom{WAH1g}#2};}}
+\makeatother
+
+\newcommand{\dt}{\mdlgblkcircle}
+\newcommand{\fdt}{\mdlgwhtcircle}
+
+\begin{document}
+
+\[
+A=\begin{pmatrix}
+  \circled{1} & & & & & & & \\
+  & \circled{2} & & & & & & \\
+  & & \circled{3} & & & & & \\
+  & & & \circled{4} & & & & \\
+  & & & & \circled{5} & & & \\
+  & & & & & \circled{6} & & \\
+  & & & & & & \circled{7} & \\
+  & & & & & & & \circled{8} \\
+\end{pmatrix}
+L=\begin{pmatrix}
+    \circled{1} & & & & & & & \\
+    & \circled{2} & & & & & & \\
+    & & \circled{3} & & & & & \\
+    & & & \circled{4} & & & & \\
+    & & & & \circled{5} & & & \\
+    & & & & & \circled{6} & & \\
+    & & & & & & \circled{7} & \\
+    & & & & & & & \circled{8} \\
+  \end{pmatrix}
+\]
+
+
+\end{document}
