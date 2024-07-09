@@ -1,0 +1,24 @@
+\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{tikz}
+\newcommand*\markterm[2]{%
+	\tikz[remember picture,anchor=base west,baseline,inner sep=0pt, outer sep=0pt]\node(#1){$#2$};%
+}
+\newcommand*\arrowtoterm[3][]{%
+	\tikz[remember picture,anchor=base west,baseline,inner sep=0pt, outer sep=0pt]\node(x){#3};%
+	\tikz[remember picture,overlay,->,shorten <=2pt,shorten >=2pt,#1]\draw(x)to(#2);%
+}
+\begin{document}
+\parindent=0pt
+Voici une équation
+\[3x^2-\markterm{a}{4x}+1\]
+Dans cette équation, ce \arrowtoterm{a}{terme} est le terme de degré 1.
+
+\bigbreak
+
+Voici une équation
+\[\markterm{c}{3x^2}-\markterm{b}{4x}+1\]
+Dans cette équation, ce \arrowtoterm[out=90,in=90,thick,red,-stealth]{b}{terme} est le terme de degré 1 et \arrowtoterm[out=270,in=270,thick,blue,-stealth]{c}{celui-ci} est celui de degré 2.
+\end{document}

@@ -14,6 +14,7 @@
 
 \newcommand{\dt}{\mdlgblkcircle}
 \newcommand{\fdt}{\mdlgwhtcircle}
+\newcommand{\mc}{\multicolumn{1}{c}}
 
 \begin{document}
 
@@ -38,6 +39,36 @@ L=\begin{pmatrix}
     & & & & & & \circled{7} & \\
     & & & & & & & \circled{8} \\
   \end{pmatrix}
+\]
+
+
+\[
+  \renewcommand{\arraystretch}{1.2}
+  \left(
+  \begin{array}{ c c | c c | c c }
+    \multicolumn{1}{|c}{} & & 0 & \mc{0} & 0 & 0 \\
+    \multicolumn{2}{|c|}{\raisebox{.6\normalbaselineskip}[0pt][0pt]{$J_1$}} & 0 & \mc{0} & 0 & 0 \\
+    \cline{1-4}
+    0 & 0 & & & 0 & 0 \\
+    0 & 0 & \multicolumn{2}{c|}{\raisebox{.6\normalbaselineskip}[0pt][0pt]{$J_2$}} & 0 & 0 \\
+    \cline{3-6}
+    0 & \mc{0} & 0 & 0 & & \multicolumn{1}{c|}{} \\
+    0 & \mc{0} & 0 & 0 & \multicolumn{2}{c|}{\raisebox{.6\normalbaselineskip}[0pt][0pt]{$J_3$}}
+  \end{array}
+  \right)
+\]
+
+\[
+  \renewcommand{\arraystretch}{1.2}
+  \left(
+  \begin{array}{  c c c }
+    1 & 0 & 0 \\
+    \cline{2-3}
+    1 & \multicolumn{1}{|c}{} & \multicolumn{1}{c|}{} \\
+    2 & \multicolumn{2}{|c|}{\raisebox{.6\normalbaselineskip}[0pt][0pt]{$J_3$}} \\
+    \cline{2-3}
+  \end{array}
+  \right)
 \]
 
 
