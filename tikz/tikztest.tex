@@ -26,6 +26,7 @@
 	\tikz[remember picture,overlay,->,shorten <=2pt,shorten >=2pt,#1]\draw(x)to(#2);%
 }
 
+\newcommand{\tikzmark}[1]{\tikz[baseline,remember picture] \coordinate (#1) {};}
 
 \begin{document}
 
@@ -67,6 +68,10 @@
     \draw[fleche] (F4) -- (4);
     \draw[fleche] (F6) -- (6);
 
+    \node (U4def) at (11,2.1) {};
+    \node (U4use) at (8.6,3.3) {};
+
+    \draw[->] (U4def.west) -- (U4use.south) node[midway,above right] {\footnotesize{Update}}; 
 
 \end{tikzpicture}
 
